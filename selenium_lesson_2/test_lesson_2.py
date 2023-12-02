@@ -9,7 +9,6 @@
 
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import sys
 
 
 def wait(driver, xpath_value):
@@ -51,14 +50,10 @@ class TestLessonTwo:
         synonym_button = driver.find_element("xpath", synonym_button_xpath)
         synonym_button.click()
 
-        # Step 4. Assert and printing to console
+        # Step 4. Assert and print to console
         word_xpath = "//h1[contains(text(), 'appreciation')]"
         wait(driver, word_xpath)
         word = driver.find_element("xpath", word_xpath)
         expected_result = 'appreciation'
         assert word.text == expected_result, f"Expected '{expected_result}', but got '{word.text}'"
         print(word.text)
-
-
-
-
