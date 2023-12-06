@@ -23,17 +23,18 @@ class TestRedCard:
 
         # Assert text is the expected one
         expected_text = "Пройдите идентификацию"
-        assert expected_text in text_element.text, f"Wrong text: Expected {expected_text}, but got {text_element.text}"
+        assert expected_text in text_element.text, (f"Wrong text: Expected '{expected_text}', "
+                                                    f"but got '{text_element.text}'")
 
         # Assert "Proceed to MSI" is present
         button = red_card_page.assert_element(RedCardPageLocators.PROCEED_TO_MSI)
 
         # Assert "Proceed to MSI" button name is the expected one
         expected_button_name = "Перейти в МСИ"
-        assert expected_button_name in button.text, (f"Wrong button name: Expected {expected_button_name},"
-                                                     f" but got {button.text}")
+        assert expected_button_name in button.text, (f"Wrong button name: Expected '{expected_button_name}',"
+                                                     f" but got '{button.text}'")
 
         # Assert "Proceed to MSI" button color
         color = ColorUtils.rgba_to_hex(button.value_of_css_property("background-color"))
         expected_color = "#ef3124"
-        assert color == expected_color, f"Wrong color: Expected '{expected_color}, but got '{color}'"
+        assert color == expected_color, f"Wrong color: Expected '{expected_color}', but got '{color}'"
