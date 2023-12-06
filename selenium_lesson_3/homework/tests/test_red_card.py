@@ -37,6 +37,3 @@ class TestRedCard:
         color = ColorUtils.rgba_to_hex(button.value_of_css_property("background-color"))
         expected_color = "#ef3124"
         assert color == expected_color, f"Wrong color: Expected '{expected_color}, but got '{color}'"
-
-
-

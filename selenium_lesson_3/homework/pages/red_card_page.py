@@ -12,5 +12,3 @@ class RedCardPage(BasePage):
 
     def submit_phone_number(self) -> None:
         self.click(RedCardPageLocators.SUBMIT)
-
-
