@@ -30,9 +30,6 @@ class BasePage:
     def open_page(self) -> None:
         self.driver.get(self.url)
 
-    # def is_page_opened(self):
-    #     self.wait.until(EC.url_contains(self.url))
-
     def get_current_url(self) -> str:
         return self.driver.current_url
 

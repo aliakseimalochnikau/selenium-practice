@@ -18,10 +18,10 @@ class TestRedCard:
         red_card_page.input_phone_number()
         red_card_page.submit_phone_number()
 
-        # Assert "Title" is present
+        # Assert text is present
         text_element = red_card_page.assert_element(RedCardPageLocators.TEXT)
 
-        # Assert "Title" is the expected one
+        # Assert text is the expected one
         expected_text = "Пройдите идентификацию"
         assert expected_text in text_element.text, f"Wrong text: Expected {expected_text}, but got {text_element.text}"
 
