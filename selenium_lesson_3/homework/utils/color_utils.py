@@ -1,4 +1,5 @@
 class ColorUtils:
+    @staticmethod
     def rgba_to_hex(rgba_color: str) -> str:
         rgba_str = rgba_color.strip("rgba()").replace(" ", "").split(",")
         rgba_values = [int(color) for color in rgba_str]

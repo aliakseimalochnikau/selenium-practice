@@ -4,7 +4,6 @@ from selenium_lesson_3.homework.pages.base_page import BasePage
 
 
 class RedCardPage(BasePage):
-
     def red_card_page_is_expected(self) -> None:
         assert RedCardPageLocators.URL in self.get_current_url()
 

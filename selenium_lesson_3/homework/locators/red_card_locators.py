@@ -7,4 +7,3 @@ class RedCardPageLocators:
     SUBMIT = (By.XPATH, "//*[@type='submit']")
     TEXT = (By.XPATH, "//*[@class='title' and text()='Пройдите идентификацию']")
     PROCEED_TO_MSI = (By.XPATH, "//*[@type='button']")
-

@@ -3,7 +3,6 @@ from selenium_lesson_3.homework.pages.base_page import BasePage
 
 
 class HomePage(BasePage):
-
     def home_page_is_expected(self) -> None:
         assert HomePageLocators.URL in self.get_current_url()
 
